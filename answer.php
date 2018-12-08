@@ -23,7 +23,7 @@ $data           = array();      // array to pass back data
         $data['success'] = true;
         
     }
-    $con = mysqli_connect('localhost','root','','readplay');
+    $con = mysqli_connect('localhost','root','1234','readplay');
     if (!$con) {
         die('Could not connect: ' . mysqli_error($con));
     }
@@ -49,7 +49,7 @@ $data           = array();      // array to pass back data
 
     function updateScore($user){
         $game = $_SESSION['game'];
-        $con = mysqli_connect('localhost','root','','readplay');
+        $con = mysqli_connect('localhost','root','1234','readplay');
         if (!$con) {
             die('Could not connect: ' . mysqli_error($con));
         }

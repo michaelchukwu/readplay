@@ -6,7 +6,7 @@ $class = $_POST['class1'];
 $email = $_POST['email1'];
 $password = $_POST['password'];
 
-$con = mysqli_connect('localhost','root','','readplay');
+$con = mysqli_connect('localhost','root','1234','readplay');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }

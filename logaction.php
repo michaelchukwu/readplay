@@ -3,7 +3,7 @@ session_start();
 $user = $_POST['username'];
 $password = $_POST['password'];
 
-$con = mysqli_connect('localhost','root','','readplay');
+$con = mysqli_connect('localhost','root','1234','readplay');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
