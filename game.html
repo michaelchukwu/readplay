@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>readPlay</title>
+	<meta charset = "UTF-8" name = "viewport" content = "width-device=width, initial-scale=1"/>
+  	<link rel="stylesheet" type="text/css" href="read.css">
+	<script src="quest.js"></script>
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="node_modules/jquery-modal/jquery.modal.js"></script>
+	<link rel="stylesheet" href="node_modules/jquery-modal/jquery.modal.css">
+</head>
+<body>	
+	<div class="layout" style="text-align: center;">
+		<table class="scoreboard">
+			<tr>
+				<th>Score</th> <!--(<0 to 42) 
+						  Additions (+2points for click on valid symbol and providing right text)
+						  Subtractions (-1point for click on wrong symbol and providing no/wrong text-->
+				<th>Level</th> <!--according to score (0-10=poor) (10-24=fair) (25-35=good) (36-41= great) (42=excellent)-->
+			</tr>
+			<tr><td>----</td><td>----</td></tr>
+		</table>
+
+		<table class="timer">
+			<tr>
+				<th>Timer</th> <!--shows count down to 15 minutes (standard game duration)-->
+			<tr><td>00:00</td></tr>
+		</table>
+
+		<img src="street.png"  class="iok" id="click2"><!-- The Modal -->
+		<div id="modal2" class="modal"><!-- Modal content -->
+  			<div class="modal-content">
+  			<form method="post">
+  			Reference Text: <!--FACELESS--><input type="text" name="text">
+  			<input type="submit" value="go" name="go">
+  			</form>
+  			</div>
+  		</div>
+	
+
+	<img src="thief.png"  class="iok" id="click7">
+		<div id="modal7" class="modal">
+			<div class="modal-content">
+  				<form method="post">
+  				Reference Text: <!--HARVEST OF CORRUPTION--><input type="text" name="text">
+  				<input type="submit" value="go" name="go">
+  				</form>
+  			</div>
+		</div>
+
+	<img src="sun.png"  class="ibig" id="click3">
+		<div id="modal3" class="modal">
+			<div class="modal-content">
+  				MISS<img src="miss.gif">
+  			</div>
+		</div>
+<!-- I had to take out the modals for images below for readabilty since you said I only need 1 but I left the other two above so you can see what I did earlier -->
+
+	<a href="#modal3" rel="modal:open"><img src="plane.gif"  class="ibig" id="click4"><!--MISS--></a>
+		
+	<a href="#modal3" rel="modal:open"><img src="torch.png"  class="iok" id="click5"><!--MISS--></a>
+				
+	<a href="#modal3" rel="modal:open"><img src="foot.png"  class="ibig" id="click6"><!--MISS--></a>
+		
+	<a href="#modal3" rel="modal:open"><img src="read.png"  class="ibig" id="click1"><!--MISS--></a>
+		
+	<a href="#modal3" rel="modal:open"><img src="run.png"  class="ibig" id="click8"><!--MISS--></a>
+		
+	<a href="#modal3" rel="modal:open"><img src="gift.png"  class="iok" id="click9"><!--MISS--></a>
+
+	<a href="#modal3" rel="modal:open"><img src="win.png"  class="iok" id="click10"><!--MISS--></a>
+
+	<a href="#modal7" rel="modal:open"><img src="beach3.png"  class="ibig boss" id="click11"><!--answer = THE LAST GOOD MAN--></a>		
+		
+	<a href="#question" rel="modal:open"><img src="love.gif"  class="iok boss" id="click12"><!--answer = SHE STOOPS TO CONQUER--></a>
+		
+	<a href="#modal3" rel="modal:open"><img src="money.gif"  class="ibig boss" id="click13"><!--MISS--></a>
+	
+	<a href="#question" rel="modal:open"><img src="house.png"  class="ibig boss" id="click14"><!--answer = A RAISIN IN THE SUN--></a>
+			
+	<a href="#question" rel="modal:open"><img src="diamond.png"  class="iok boss" id="click15"><!--answer = THE BLOOD OF A STRANGER--></a>
+	
+	<a href="#question" rel="modal:open"><img src="sword.png"  class="ibig boss" id="click16"><!--answer = OTELLO--></a>
+		
+	<a href="#question" rel="modal:open"><img src="slave.png"  class="iok boss" id="click17"><!--answer = NATIVE SOM--></a>
+					
+	<a href="#question" rel="modal:open"><img src="widow.png"  class="iok boss" id="click18"><!--answer = LONELY DAYS--></a>
+<!--All symbols with MISS should show the "out.png" as modals-->
+<!--The others should show modals with "Reference Text" and a text input field for the answer-->
+<div class="modal" id="question">something that I just want to do</div>
+</div>
+<script>
+function showQuestion(str) {
+  var xhttp;  
+  if (str == "") {
+    document.getElementById("missed").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.asp?q="+str, true);
+  xhttp.send();
+}
+</script>
+</body>
+</html>
+<head>

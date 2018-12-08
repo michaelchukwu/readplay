@@ -1,0 +1,156 @@
+body{
+  background-image: url("cloud.jpg");
+  background-size: cover;
+  background-position: center;
+  height:90vh;
+  background-attachment: fixed
+}
+.scoreboard{
+  position: absolute;
+  left:1%;
+  top:2%;
+}
+.timer{
+  position: absolute;
+  float: right;
+  top: 2%;
+  right: 1%;
+}
+.layout{
+  background-image: url("dia.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 90%;
+  height: 550px;
+  top: 10%;
+  margin: auto;
+}
+.layout table, tr, td, th{
+  border: 1px black black;
+  border-radius: 60%;
+  background-color: brown;
+  color: white;
+  border-collapse: collapse;
+  padding: 10px;
+}
+.iok{
+  height: 80px; 
+  width: 80px;
+}
+.ismall{
+  height: 100px;
+  width: 100px;
+}
+.ibig{
+  height: 60px;
+  width: 60px;
+}
+#click1{
+  position: absolute;
+  left:85%;
+  top:85%;      
+}
+#click2{
+  position: absolute;
+  top: 40%;
+  left:55%;
+}
+#click3{
+  position: absolute;
+  top: 20%;
+  left:55%;
+}
+#click4{
+  position: absolute;
+  left:12%;
+  top:65%;
+}
+#click6{
+  position: absolute;
+  top: 5%;
+  left:75%;
+}
+#click7{
+  position: absolute;
+  left: 85%;
+  top:60%;      
+}
+#click8{
+  position: absolute;
+  top:35%;
+  left:75%;
+}
+#click9{
+  position: absolute;
+  left:0;
+  top:30%;
+}
+#click10{
+  position: absolute;
+  left:20%;
+  top:40%;
+}
+#click11{
+  position: absolute;
+  top:2%;
+  left:60%;
+}
+#click12{
+  position: absolute;
+  left:37%;
+  top:75%;
+}
+#click13{
+  position: absolute;
+  top: 35%;
+  left:95%;
+}
+#click14{
+  position: absolute;
+  left:34%;
+  top:52%;
+}
+#click15{
+  position: absolute;
+  top: 55%;
+  left:70%;
+}
+#click16{
+  position: absolute;
+  left:52%;
+  top:62%;
+}
+#click17{
+  position: absolute;
+  left:31%;
+  top:25%;
+}
+#click18{
+  position: absolute;
+  left:0;
+  top:80%;
+}
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 40px;  
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height border-radius: 50%;
+    /*overflow: auto;  Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content*/ 
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 200px;
+  height: 50px;
+}
+    
